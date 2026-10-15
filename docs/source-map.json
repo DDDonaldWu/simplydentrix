@@ -1,0 +1,98 @@
+[
+  {
+    "source": "Pasted text(1).txt",
+    "page": "index.html",
+    "styles": "assets/css/index.css",
+    "script": null
+  },
+  {
+    "source": "Pasted text (2).txt",
+    "page": "customer-portal.html",
+    "styles": "assets/css/customer-portal.css",
+    "script": "assets/js/customer-portal.js"
+  },
+  {
+    "source": "Pasted text (3).txt",
+    "page": "material.html",
+    "styles": "assets/css/material.css",
+    "script": "assets/js/material.js"
+  },
+  {
+    "source": "Pasted text (4).txt",
+    "page": "product.html",
+    "styles": "assets/css/product.css",
+    "script": null
+  },
+  {
+    "source": "Pasted text (5).txt",
+    "page": "turn-around-time.html",
+    "styles": "assets/css/turn-around-time.css",
+    "script": null
+  },
+  {
+    "source": "Pasted text (6).txt",
+    "page": "contact.html",
+    "styles": "assets/css/contact.css",
+    "script": "assets/js/contact.js"
+  },
+  {
+    "source": "Pasted text(2).txt",
+    "page": "pfm.html",
+    "styles": "assets/css/pfm.css",
+    "script": "assets/js/pfm.js"
+  },
+  {
+    "source": "Pasted text (2)(1).txt",
+    "page": "all-ceramic.html",
+    "styles": "assets/css/all-ceramic.css",
+    "script": "assets/js/all-ceramic.js"
+  },
+  {
+    "source": "Pasted text (3)(2).txt",
+    "page": "high-translucency-zirconia.html",
+    "styles": "assets/css/high-translucency-zirconia.css",
+    "script": "assets/js/high-translucency-zirconia.js"
+  },
+  {
+    "source": "Pasted text (4)(1).txt",
+    "page": "partial-framework.html",
+    "styles": "assets/css/partial-framework.css",
+    "script": "assets/js/partial-framework.js"
+  },
+  {
+    "source": "Pasted text (5)(1).txt",
+    "page": "flexible-partials-rpd.html",
+    "styles": "assets/css/flexible-partials-rpd.css",
+    "script": null
+  },
+  {
+    "source": "Pasted text (6)(1).txt",
+    "page": "full-dentures.html",
+    "styles": "assets/css/full-dentures.css",
+    "script": null
+  },
+  {
+    "source": "Pasted text (7).txt",
+    "page": "all-on-x-solutions.html",
+    "styles": "assets/css/all-on-x-solutions.css",
+    "script": "assets/js/all-on-x-solutions.js"
+  },
+  {
+    "source": "Pasted text (8).txt",
+    "page": "comprehensive-smile-design.html",
+    "styles": "assets/css/comprehensive-smile-design.css",
+    "script": "assets/js/comprehensive-smile-design.js"
+  },
+  {
+    "source": "Fixed Restorations code pasted in chat",
+    "page": "fixed-restorations.html",
+    "styles": "assets/css/fixed-restorations.css",
+    "script": null
+  },
+  {
+    "source": "Pasted text (9).txt",
+    "page": "removables.html",
+    "styles": "assets/css/removables.css",
+    "script": null
+  }
+]

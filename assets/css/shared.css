@@ -1,0 +1,20 @@
+/* Shared accessibility adjustments; page layouts remain in their own stylesheets. */
+a:focus-visible, button:focus-visible, summary:focus-visible,
+input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #0872b8;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Return navigation for category pages supplied without a site header. */
+.sd-category-breadcrumb {
+  box-sizing: border-box; margin: 0; padding: 20px max(20px, calc((100% - 1160px) / 2));
+  color: #17384f; background: #fff; font: 14px/1.6 Arial, sans-serif;
+}
+.sd-category-breadcrumb a { color: #0872b8; }

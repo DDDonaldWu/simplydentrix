@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Portal | Simply Dentrix</title>
+  <link rel="stylesheet" href="assets/css/customer-portal.css">
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/customer-portal.js" defer></script>
+</head>
+<body>
+<div class="sd-portal">
+
+  <!-- HEADER -->
+  <header class="sd-header">
+    <div class="sd-container sd-header-inner">
+      <a class="sd-logo-link" href="index.html" aria-label="Simply Dentrix Home">
+        <img
+          class="sd-logo"
+          src="assets/images/logo.png"
+          alt="Simply Dentrix"
+        >
+      </a>
+
+      <div class="sd-kicker">Premium Dental Laboratory</div>
+
+      <div class="sd-nav-shell" aria-label="Simply Dentrix navigation">
+        <nav class="sd-nav">
+          <a href="index.html">Home</a>
+          <a class="sd-active" aria-current="page" href="customer-portal.html">Customer Portal</a>
+          <a href="material.html">Material</a>
+          <a href="product.html">Product</a>
+          <a href="turn-around-time.html">Turn Around Time</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="sd-hero">
+    <div class="sd-container sd-hero-grid">
+      <div>
+        <div class="sd-pill">
+          <span class="sd-pill-dot"></span>
+          Customer Case Resources
+        </div>
+
+        <h1>Download, Complete & Submit Your Rx Form.</h1>
+
+        <p class="sd-hero-copy">
+          Choose the detailed or simplified Simply Dentrix prescription form.
+          Complete the fillable PDF on your computer, save it, and email it with
+          any scans, photographs, or supporting case files.
+        </p>
+
+        <div class="sd-hero-actions">
+          <a
+            class="sd-btn sd-btn-primary sd-pdf-link"
+            href="#" data-rx-form="detailed"
+            data-pdf-name="Detailed Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Detailed RX Form
+          </a>
+
+          <a
+            class="sd-btn sd-btn-secondary sd-pdf-link"
+            href="#" data-rx-form="simplified"
+            data-pdf-name="Simplified Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Simplified RX Form
+          </a>
+
+          <div class="sd-hero-note">
+            The completed PDF must be saved and manually attached to your email.
+          </div>
+        </div>
+      </div>
+
+      <div class="sd-hero-card">
+        <div class="sd-hero-card-inner">
+          <div class="sd-card-top">
+            <div class="sd-card-icon" aria-hidden="true">🦷</div>
+            <div>
+              <h2>Rx Form Required</h2>
+              <span>Please include one completed prescription form with every submitted case.</span>
+            </div>
+          </div>
+
+          <div class="sd-mini-list">
+            <div class="sd-mini-item">
+              <span class="sd-check">✓</span>
+              <span>Doctor, practice, patient, due-date, and case details.</span>
+            </div>
+
+            <div class="sd-mini-item">
+              <span class="sd-check">✓</span>
+              <span>Restoration, material, shade, and design selections.</span>
+            </div>
+
+            <div class="sd-mini-item">
+              <span class="sd-check">✓</span>
+              <span>Supporting scans, photographs, and special instructions.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM CHOICES -->
+  <section class="sd-forms" id="forms">
+    <div class="sd-container">
+      <div class="sd-section-head">
+        <div class="sd-eyebrow">Official Fillable PDFs</div>
+        <h2>Choose the Best Form for Your Case</h2>
+        <p>
+          Both forms can be completed electronically. Select the detailed form
+          for more complex cases or the simplified form for routine submissions.
+        </p>
+      </div>
+
+      <div class="sd-form-grid">
+
+        <!-- DETAILED FORM -->
+        <article class="sd-form-card">
+          <div class="sd-form-card-top">
+            <div class="sd-pdf-icon" aria-hidden="true">PDF</div>
+            <div>
+              <h3>Detailed RX Form</h3>
+              <p>
+                Best for complex or highly customized cases requiring additional
+                restorative, removable, design, and case-instruction options.
+              </p>
+            </div>
+          </div>
+
+          <div class="sd-feature-list">
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Expanded restoration and material selections</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Shade, tooth, margin, and design information</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Additional case notes and enclosed-item details</span>
+            </div>
+          </div>
+
+          <a
+            class="sd-btn sd-pdf-link"
+            href="#" data-rx-form="detailed"
+            data-pdf-name="Detailed Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Detailed Fillable PDF
+          </a>
+
+          <div class="sd-file-note">
+            Open the downloaded file in Adobe Acrobat Reader, complete it, and save a new copy.
+          </div>
+        </article>
+
+        <!-- SIMPLIFIED FORM -->
+        <article class="sd-form-card">
+          <div class="sd-form-card-top">
+            <div class="sd-pdf-icon" aria-hidden="true">PDF</div>
+            <div>
+              <h3>Simplified RX Form</h3>
+              <p>
+                A cleaner and faster option for routine fixed restorations,
+                removable cases, and straightforward laboratory instructions.
+              </p>
+            </div>
+          </div>
+
+          <div class="sd-feature-list">
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Quick doctor, practice, patient, and due-date fields</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Fixed and removable case selections</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Case instructions and enclosed-item information</span>
+            </div>
+          </div>
+
+          <a
+            class="sd-btn sd-pdf-link"
+            href="#" data-rx-form="simplified"
+            data-pdf-name="Simplified Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Simplified Fillable PDF
+          </a>
+
+          <div class="sd-file-note">
+            Open the downloaded file in Adobe Acrobat Reader, complete it, and save a new copy.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sd-process">
+    <div class="sd-container">
+      <div class="sd-section-head">
+        <div class="sd-eyebrow">How It Works</div>
+        <h2>Complete Your Submission in Three Steps</h2>
+        <p>
+          Keep the completed prescription and supporting case files together
+          so the Simply Dentrix team can review the case efficiently.
+        </p>
+      </div>
+
+      <div class="sd-process-grid">
+        <article class="sd-process-card">
+          <div class="sd-process-number">1</div>
+          <h3>Download</h3>
+          <p>
+            Select the detailed or simplified fillable Rx PDF and save it to your device.
+          </p>
+        </article>
+
+        <article class="sd-process-card">
+          <div class="sd-process-number">2</div>
+          <h3>Complete & Save</h3>
+          <p>
+            Enter all case details, select the appropriate options, and save the completed PDF.
+          </p>
+        </article>
+
+        <article class="sd-process-card">
+          <div class="sd-process-number">3</div>
+          <h3>Email the Case</h3>
+          <p>
+            Attach the saved Rx form along with scans, photographs, and any other supporting files.
+          </p>
+        </article>
+      </div>
+
+      <div class="sd-reader-note">
+        <strong>Adobe Acrobat Pro is not required for normal form completion.</strong>
+        Customers can generally use the free Adobe Acrobat Reader to type into the fields,
+        select checkboxes, save the completed form, and print it.
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBMISSION AND CONTACT -->
+  <section class="sd-submit">
+    <div class="sd-container sd-submit-grid">
+      <div>
+        <div class="sd-eyebrow">Submit Your Case</div>
+        <h2>Send the Completed Form to Simply Dentrix</h2>
+        <p class="sd-submit-copy">
+          Attach the completed Rx PDF and supporting digital case files to your email.
+          For physical impressions or models, include a printed copy of the prescription
+          with the package.
+        </p>
+      </div>
+
+      <div class="sd-submit-card">
+        <div class="sd-contact-list">
+          <div class="sd-contact-item">
+            <strong>Email</strong>
+            <a href="mailto:simplydentrix@gmail.com?subject=Simply%20Dentrix%20New%20Case%20Submission">
+              simplydentrix@gmail.com
+            </a>
+          </div>
+
+          <div class="sd-contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+17145887030">714-588-7030</a>
+          </div>
+
+          <div class="sd-contact-item">
+            <strong>Mailing Address</strong>
+            <span>Simply Dentrix<br>1315 W Cara Dr<br>Anaheim, CA 92805</span>
+          </div>
+        </div>
+
+        <a
+          class="sd-btn sd-email-button"
+          href="mailto:simplydentrix@gmail.com?subject=Simply%20Dentrix%20New%20Case%20Submission&body=Please%20attach%20the%20completed%20Rx%20form%20and%20all%20supporting%20case%20files."
+        >
+          Start Case Submission Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sd-footer">
+    <div class="sd-container">
+      © 2026 Simply Dentrix. Premium dental restorations, crafted with precision.
+    </div>
+  </footer>
+
+  <div class="sd-toast" id="sdPdfToast" role="status" aria-live="polite"></div>
+</div>
+</body>
+</html>

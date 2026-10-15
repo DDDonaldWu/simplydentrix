@@ -1,0 +1,433 @@
+/*
+    SIMPLY DENTRIX — REMOVABLES PAGE
+    Designed to match the Fixed Restorations page.
+
+    Product links:
+    /partial-framework
+    /flexible-partials-rpd
+    /full-dentures
+
+    Customer Portal:
+    /customer-portal
+  */
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #ffffff;
+  }
+
+  .srr-page {
+    --navy: #041b2d;
+    --blue: #0b7fc4;
+    --sky: #37c8ee;
+    --teal: #47cfc9;
+    --ice: #eef8fc;
+    --line: #d9eaf2;
+    --text: #17384f;
+    --muted: #61798b;
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .srr-page * {
+    box-sizing: border-box;
+  }
+
+  .srr-page a {
+    text-decoration: none;
+  }
+
+  .srr-wrap {
+    width: min(1160px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  /* HERO */
+
+  .srr-hero {
+    min-height: 690px;
+    display: grid;
+    align-items: center;
+    color: #ffffff;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(4, 27, 45, 0.98) 0%,
+        rgba(4, 27, 45, 0.92) 47%,
+        rgba(4, 27, 45, 0.28) 100%
+      ),
+      url("https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_1500,w_2000,f_auto,q_auto/11403672/473363_565806.png")
+      center / cover no-repeat;
+    border-bottom: 6px solid var(--teal);
+  }
+
+  .srr-hero-grid {
+    display: grid;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 50px;
+    align-items: center;
+    padding: 95px 0;
+  }
+
+  .srr-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--teal);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .srr-kicker::before {
+    content: "";
+    width: 42px;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--teal);
+  }
+
+  .srr-hero h1 {
+    margin: 0 0 22px;
+    color: #ffffff;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: clamp(46px, 6vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+  }
+
+  .srr-hero p {
+    max-width: 650px;
+    margin: 0 0 30px;
+    color: #dff5ff;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .srr-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .srr-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--teal), var(--blue));
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 900;
+    box-shadow: 0 16px 38px rgba(11, 127, 196, 0.28);
+    transition: 0.25s ease;
+  }
+
+  .srr-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 48px rgba(11, 127, 196, 0.36);
+  }
+
+  .srr-btn.alt {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    box-shadow: none;
+  }
+
+  .srr-spec {
+    padding: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(16px);
+  }
+
+  .srr-spec h3 {
+    margin: 0 0 22px;
+    color: #ffffff;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  .srr-spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .srr-spec-item {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .srr-spec-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  .srr-spec-item span {
+    color: #dff5ff;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* PRODUCTS */
+
+  .srr-products {
+    padding: 90px 0;
+    background: #ffffff;
+  }
+
+  .srr-heading {
+    max-width: 780px;
+    margin: 0 auto 48px;
+    text-align: center;
+  }
+
+  .srr-heading h2 {
+    margin: 0 0 14px;
+    color: var(--navy);
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.08;
+  }
+
+  .srr-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .srr-row {
+    display: grid;
+    gap: 22px;
+  }
+
+  .srr-card {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    gap: 26px;
+    align-items: center;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: linear-gradient(180deg, #ffffff, #f9fdff);
+    box-shadow: 0 14px 38px rgba(4, 27, 45, 0.07);
+    transition: 0.25s ease;
+  }
+
+  .srr-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(71, 207, 201, 0.55);
+    box-shadow: 0 22px 54px rgba(4, 27, 45, 0.13);
+  }
+
+  .srr-card-icon {
+    height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #e8fbfa, #d5f3f1);
+    color: #188f99;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 28px;
+  }
+
+  .srr-card h3 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 25px;
+  }
+
+  .srr-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .srr-arrow {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #ffffff;
+    font-size: 22px;
+  }
+
+  /* CTA */
+
+  .srr-cta {
+    padding: 86px 0;
+    color: #ffffff;
+    background: linear-gradient(135deg, #041b2d, #0a5f95);
+  }
+
+  .srr-cta-box {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .srr-cta h2 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.08;
+  }
+
+  .srr-cta p {
+    margin: 0 0 24px;
+    color: #dff5ff;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .srr-contact {
+    display: grid;
+    gap: 12px;
+  }
+
+  .srr-contact div {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .srr-contact small {
+    display: block;
+    margin-bottom: 6px;
+    color: #88ddff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+
+  .srr-contact a,
+  .srr-contact span {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .srr-footer {
+    padding: 28px 0;
+    background: #031521;
+    color: #bcd7e3;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 900px) {
+    .srr-hero-grid,
+    .srr-cta-box {
+      grid-template-columns: 1fr;
+    }
+
+    .srr-card {
+      grid-template-columns: 120px 1fr;
+    }
+
+    .srr-arrow {
+      display: none;
+    }
+
+    .srr-hero {
+      text-align: center;
+    }
+
+    .srr-hero p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .srr-btns {
+      justify-content: center;
+    }
+
+    .srr-spec {
+      text-align: left;
+    }
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 650px) {
+    .srr-wrap {
+      width: min(100% - 30px, 1160px);
+    }
+
+    .srr-hero {
+      min-height: auto;
+      background:
+        linear-gradient(rgba(4, 27, 45, 0.88), rgba(4, 27, 45, 0.88)),
+        url("https://custom-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_1500,w_2000,f_auto,q_auto/11403672/473363_565806.png")
+        center / cover no-repeat;
+    }
+
+    .srr-hero-grid {
+      padding: 68px 0;
+    }
+
+    .srr-hero h1 {
+      font-size: 42px;
+      line-height: 1.05;
+    }
+
+    .srr-spec-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .srr-card {
+      grid-template-columns: 1fr;
+    }
+
+    .srr-card-icon {
+      height: 95px;
+    }
+
+    .srr-products,
+    .srr-cta {
+      padding: 62px 0;
+    }
+
+    .srr-btns {
+      flex-direction: column;
+    }
+
+    .srr-btn {
+      width: 100%;
+    }
+  }

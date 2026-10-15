@@ -1,0 +1,742 @@
+/*
+    SIMPLY DENTRIX — PREMIUM INQUIRY PAGE WITH CREATIVE DROPDOWNS
+
+    Included:
+    - Homepage-style logo sizing
+    - Premium inquiry/contact layout
+    - Creative dropdown multi-select fields
+    - Product categories:
+      Fixed, RPD, Denture, Ortho, Smile Design, Digital Design
+    - Dental Materials removed
+    - Mobile responsive design
+    - Formspree-ready form action placeholder
+  */
+
+  html {
+    scroll-behavior: smooth;
+    background: #f5fbff;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background: #f5fbff;
+  }
+
+
+  /* PAGE */
+
+  .sd-inquiry-page {
+    position: relative;
+    overflow: hidden;
+    padding: 76px 20px;
+    background:
+      radial-gradient(circle at 5% 5%, rgba(38, 166, 221, 0.13), transparent 28%),
+      radial-gradient(circle at 95% 92%, rgba(23, 50, 77, 0.10), transparent 30%),
+      linear-gradient(135deg, #eef8ff 0%, #ffffff 48%, #f5fbff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17324d;
+  }
+
+  .sd-inquiry-page * {
+    box-sizing: border-box;
+  }
+
+  .sd-inquiry-container {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.35fr;
+    gap: 34px;
+    align-items: stretch;
+  }
+
+  /* LEFT CARD */
+
+  .sd-info-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 42px 34px;
+    color: #ffffff;
+    background:
+      radial-gradient(circle at 85% 10%, rgba(38, 166, 221, 0.36), transparent 34%),
+      linear-gradient(160deg, #17324d 0%, #216b95 100%);
+    box-shadow: 0 24px 60px rgba(23, 50, 77, 0.24);
+  }
+
+  .sd-info-card::after {
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    right: -90px;
+    bottom: -90px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .sd-badge {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+  }
+
+  .sd-info-card h2 {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1.12;
+    letter-spacing: -0.6px;
+  }
+
+  .sd-info-card p {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .sd-feature-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .sd-feature-item {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  .sd-feature-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #216b95;
+    font-weight: 900;
+  }
+
+  .sd-feature-item strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #ffffff;
+    font-size: 15px;
+  }
+
+  .sd-feature-item span {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* FORM CARD */
+
+  .sd-form-card {
+    border-radius: 30px;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid rgba(33, 107, 149, 0.12);
+    box-shadow: 0 24px 60px rgba(23, 50, 77, 0.13);
+  }
+
+  .sd-form-header {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .sd-form-header h3 {
+    margin: 0 0 8px;
+    color: #17324d;
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+  }
+
+  .sd-form-header p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #6c7a86;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .sd-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .sd-form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sd-form-group.full {
+    grid-column: 1 / -1;
+  }
+
+  .sd-form-group label,
+  .sd-field-title {
+    margin-bottom: 8px;
+    color: #17324d;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .sd-form-group input,
+  .sd-form-group select,
+  .sd-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #dbe6ef;
+    border-radius: 14px;
+    background: #f9fcff;
+    color: #17324d;
+    padding: 14px 15px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.25s ease;
+  }
+
+  .sd-form-group input:focus,
+  .sd-form-group select:focus,
+  .sd-form-group textarea:focus {
+    background: #ffffff;
+    border-color: #26a6dd;
+    box-shadow: 0 0 0 4px rgba(38, 166, 221, 0.14);
+  }
+
+  .sd-form-group textarea {
+    min-height: 132px;
+    resize: vertical;
+  }
+
+  /* CREATIVE DROPDOWN MULTI-SELECT */
+
+  .sd-dropdown-field {
+    position: relative;
+  }
+
+  .sd-dropdown {
+    border: 1px solid #dbe6ef;
+    border-radius: 18px;
+    background: #f9fcff;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .sd-dropdown:hover {
+    border-color: #26a6dd;
+    box-shadow: 0 0 0 4px rgba(38, 166, 221, 0.10);
+  }
+
+  .sd-dropdown[open] {
+    background: #ffffff;
+    border-color: #26a6dd;
+    box-shadow: 0 16px 36px rgba(23, 50, 77, 0.10);
+  }
+
+  .sd-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 16px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    color: #17324d;
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  .sd-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .sd-dropdown-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sd-dropdown-title strong {
+    color: #17324d;
+    font-size: 15px;
+  }
+
+  .sd-dropdown-title span {
+    color: #7b8994;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .sd-dropdown-arrow {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 50%;
+    background: #e8f6fc;
+    color: #216b95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    transition: transform 0.25s ease;
+  }
+
+  .sd-dropdown[open] .sd-dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .sd-dropdown-menu {
+    padding: 0 16px 16px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .sd-dropdown-option {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 48px;
+    padding: 12px 13px;
+    border: 1px solid #e3eef6;
+    border-radius: 14px;
+    background: #ffffff;
+    color: #17324d;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.22s ease;
+  }
+
+  .sd-dropdown-option:hover {
+    border-color: #26a6dd;
+    background: #f5fbff;
+    transform: translateY(-1px);
+  }
+
+  .sd-dropdown-option input {
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #216b95;
+    cursor: pointer;
+  }
+
+  .sd-dropdown-option span {
+    line-height: 1.35;
+  }
+
+  .sd-dropdown-note {
+    margin-top: 8px;
+    color: #7b8994;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .sd-submit-btn {
+    width: 100%;
+    margin-top: 26px;
+    padding: 17px 20px;
+    border: none;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #17324d, #26a6dd);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 14px 28px rgba(38, 166, 221, 0.30);
+  }
+
+  .sd-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(38, 166, 221, 0.38);
+  }
+
+  .sd-small-note {
+    margin-top: 15px;
+    color: #7b8994;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 900px) {
+    .sd-inquiry-container {
+      grid-template-columns: 1fr;
+    }
+
+    .sd-info-card,
+    .sd-form-card {
+      padding: 32px 24px;
+    }
+
+    .sd-info-card h2 {
+      font-size: 31px;
+    }
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 650px) {
+    .sd-inquiry-page {
+      padding: 44px 14px;
+    }
+
+    .sd-form-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .sd-form-header h3 {
+      font-size: 25px;
+    }
+
+    .sd-info-card h2 {
+      font-size: 28px;
+    }
+
+    .sd-dropdown summary {
+      padding: 15px 15px;
+    }
+
+    .sd-dropdown-title strong {
+      font-size: 14px;
+    }
+
+    .sd-dropdown-menu {
+      padding: 0 12px 14px;
+    }
+
+    .sd-dropdown-option {
+      min-height: 46px;
+      padding: 11px 12px;
+    }
+  }
+
+
+  /* =========================================================
+     SIMPLY DENTRIX HEADER MENU — SAME AS MATERIAL/PRODUCT PAGE
+     Customer Portal style header for Contact page.
+  ========================================================= */
+
+  .sd-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-bottom: 1px solid #dcecf3 !important;
+    backdrop-filter: blur(16px) !important;
+    box-shadow: 0 12px 34px rgba(6, 31, 53, 0.07) !important;
+  }
+
+  .sd-header,
+  .sd-header * {
+    box-sizing: border-box !important;
+  }
+
+  .sd-header-inner {
+    width: min(1160px, calc(100% - 40px)) !important;
+    min-height: 168px !important;
+    margin: 0 auto !important;
+    padding: 21px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    text-align: center !important;
+  }
+
+  .sd-brand-lockup {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+  }
+
+  .sd-logo-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 150px !important;
+    max-width: 150px !important;
+    min-width: 150px !important;
+    text-decoration: none !important;
+    flex: 0 0 auto !important;
+  }
+
+  .sd-logo {
+    width: 150px !important;
+    max-width: 150px !important;
+    min-width: 150px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  .sd-brand-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+  }
+
+  .sd-brand-kicker {
+    margin: 0 !important;
+    color: #38c7ef !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2.8px !important;
+    text-transform: uppercase !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+
+  .sd-brand-title,
+  .sd-brand-subtitle,
+  .sd-menu-note,
+  .sd-mobile-menu-btn,
+  .sd-mobile-backdrop,
+  .sd-mobile-drawer,
+  .sd-mobile-nav,
+  .sd-mobile-close {
+    display: none !important;
+  }
+
+  .sd-nav-wrap {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 2px !important;
+  }
+
+  .sd-nav-shell {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    max-width: 100% !important;
+    padding: 12px 14px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    border: 1px solid #dcecf3 !important;
+    box-shadow: 0 14px 34px rgba(6, 31, 53, 0.06) !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .sd-nav-shell::-webkit-scrollbar {
+    height: 0 !important;
+    display: none !important;
+  }
+
+  .sd-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+  }
+
+  .sd-nav a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    padding: 12px 22px !important;
+    border-radius: 999px !important;
+    color: #17324d !important;
+    text-decoration: none !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    flex: 0 0 auto !important;
+    transition: all 0.22s ease !important;
+  }
+
+  .sd-nav a:hover {
+    color: #0872b8 !important;
+    background: #eef8ff !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .sd-nav a.sd-active {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #38c7ef 0%, #0872b8 56%, #061f35 100%) !important;
+    box-shadow: 0 12px 28px rgba(8, 114, 184, 0.24) !important;
+  }
+
+  @media (max-width: 700px) {
+    .sd-header-inner {
+      width: min(100% - 22px, 1160px) !important;
+      min-height: auto !important;
+      padding: 13px 0 14px !important;
+      gap: 9px !important;
+    }
+
+    .sd-logo-link,
+    .sd-logo {
+      width: 112px !important;
+      max-width: 112px !important;
+      min-width: 112px !important;
+    }
+
+    .sd-brand-kicker {
+      font-size: 9.8px !important;
+      letter-spacing: 1.25px !important;
+      line-height: 1.15 !important;
+      white-space: nowrap !important;
+      text-align: center !important;
+    }
+
+    .sd-nav-wrap {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-top: 1px !important;
+    }
+
+    .sd-nav-shell {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 6px !important;
+      border-radius: 22px !important;
+      justify-content: flex-start !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      box-shadow: 0 8px 20px rgba(6, 31, 53, 0.055) !important;
+    }
+
+    .sd-nav {
+      width: max-content !important;
+      min-width: max-content !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 6px !important;
+      flex-wrap: nowrap !important;
+      white-space: nowrap !important;
+    }
+
+    .sd-nav a {
+      min-height: 37px !important;
+      padding: 9px 11px !important;
+      font-size: 13.5px !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+      flex: 0 0 auto !important;
+    }
+
+    .sd-nav a.sd-active {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .sd-header-inner {
+      width: min(100% - 18px, 1160px) !important;
+      padding: 11px 0 12px !important;
+      gap: 8px !important;
+    }
+
+    .sd-logo-link,
+    .sd-logo {
+      width: 100px !important;
+      max-width: 100px !important;
+      min-width: 100px !important;
+    }
+
+    .sd-brand-kicker {
+      font-size: 8.9px !important;
+      letter-spacing: 1px !important;
+    }
+
+    .sd-nav-shell {
+      padding: 5px !important;
+      border-radius: 20px !important;
+    }
+
+    .sd-nav {
+      gap: 5px !important;
+    }
+
+    .sd-nav a {
+      min-height: 35px !important;
+      padding: 8px 10px !important;
+      font-size: 12.2px !important;
+    }
+
+    .sd-nav a.sd-active {
+      padding-left: 13px !important;
+      padding-right: 13px !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .sd-logo-link,
+    .sd-logo {
+      width: 92px !important;
+      max-width: 92px !important;
+      min-width: 92px !important;
+    }
+
+    .sd-brand-kicker {
+      font-size: 8.2px !important;
+      letter-spacing: 0.85px !important;
+    }
+
+    .sd-nav a {
+      min-height: 33px !important;
+      padding: 8px 9px !important;
+      font-size: 11.4px !important;
+    }
+
+    .sd-nav a.sd-active {
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+  }
