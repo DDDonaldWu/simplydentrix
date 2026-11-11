@@ -1,0 +1,35 @@
+SIMPLY DENTRIX — EQUIPMENT & CONSUMABLES UPDATE
+
+1. Extract this ZIP on your computer.
+2. Open https://github.com/DDDonaldWu/simplydentrix
+3. Create a new branch called equipment-consumables-review from main.
+4. Click Add file > Upload files.
+5. Open the github-upload folder from this package. Select ALL its CONTENTS,
+   including the assets, docs, and tests folders and the HTML files. Drag those
+   contents into GitHub. Do not drag the enclosing github-upload folder or ZIP.
+6. Existing matching files will be updated. Keep their paths unchanged.
+7. Commit message: Add equipment and consumables page with saved inquiry cart
+8. Commit to equipment-consumables-review, then open a pull request into main.
+9. Preview and review before merging. Merging may publish via your existing
+   hosting setup; this package does not change hosting settings.
+
+This upload contains the new page, its CSS and JavaScript, all 16 product
+photos, documentation/tests, and updated existing HTML navigation.
+It is an UPDATE package: leave every other existing repository file in place.
+Do not delete the repository contents. The existing logo and page styles are
+already in the repository and are intentionally not duplicated here.
+
+TO PREVIEW ON YOUR COMPUTER
+Download the existing repository (Code > Download ZIP) and extract it.
+Copy the CONTENTS of github-upload into that repository folder, allowing
+matching files to be replaced. Open equipment-consumables.html in your browser.
+For a local web server, run python -m http.server 8000 in that folder, then
+open http://localhost:8000/equipment-consumables.html.
+
+PAYMENT AND CONTENT STATUS
+Payment provider selection was deferred. Online payment is disabled.
+This is a saved inquiry cart, not a completed online ordering system.
+Prices, stock, specifications, variants, tax and shipping must be confirmed.
+No customer reviews have been supplied; no ratings or reviews are invented.
+Four cart/catalog logic tests passed. Browser visual checks remain pending.
+See docs/equipment-commerce.md for full setup and validation details.
