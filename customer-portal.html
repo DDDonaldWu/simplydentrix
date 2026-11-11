@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Portal | Simply Dentrix</title>
+  <link rel="stylesheet" href="assets/css/customer-portal.css">
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/customer-portal.js" defer></script>
+
+<style id="portal-header-fix">
+/* Customer Portal header only; independent of shared.css version. */
+#sd-site-header #sd-site-header-inner {
+  width: min(1200px, calc(100% - 40px)) !important;
+}
+#sd-site-header .sd-nav-wrap {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+#sd-site-header .sd-nav-shell {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  padding: 8px !important;
+  margin: 0 auto !important;
+  border: 1px solid #dcecf3 !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  box-shadow: 0 12px 28px rgba(6, 31, 53, .06) !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: thin;
+  scrollbar-color: #93bdcf #f1f7fa;
+}
+#sd-site-header .sd-nav-shell .sd-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  flex: 0 0 auto !important;
+  width: max-content !important;
+  min-width: max-content !important;
+  gap: 4px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
+#sd-site-header .sd-nav-shell .sd-nav a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+  min-height: 46px !important;
+  margin: 0 !important;
+  padding: 12px 15px !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  font: 700 16px/1.2 Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+  color: #17324d !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transform: none !important;
+  transition: background .2s ease, color .2s ease !important;
+}
+#sd-site-header .sd-nav-shell .sd-nav a:hover {
+  color: #0872b8 !important;
+  background: #eef8ff !important;
+}
+#sd-site-header .sd-nav-shell .sd-nav a.sd-active,
+#sd-site-header .sd-nav-shell .sd-nav a[aria-current="page"] {
+  color: #fff !important;
+  background: linear-gradient(135deg, #38c7ef 0%, #0872b8 56%, #061f35 100%) !important;
+  box-shadow: 0 6px 16px rgba(8, 114, 184, .2) !important;
+}
+#sd-site-header .sd-nav-shell .sd-nav a:focus-visible {
+  outline: 3px solid #0872b8 !important;
+  outline-offset: -3px !important;
+}
+#sd-site-header .sd-nav-shell::-webkit-scrollbar {
+  display: block !important;
+  height: 5px !important;
+}
+#sd-site-header .sd-nav-shell::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #93bdcf;
+}
+@media (max-width: 1100px) {
+  #sd-site-header .sd-nav-shell .sd-nav { gap: 3px !important; }
+  #sd-site-header .sd-nav-shell .sd-nav a {
+    padding: 11px 10px !important;
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 700px) {
+  #sd-site-header #sd-site-header-inner { width: calc(100% - 24px) !important; }
+  #sd-site-header .sd-nav-shell {
+    padding: 6px !important;
+    border-radius: 20px !important;
+  }
+  #sd-site-header .sd-nav-shell .sd-nav { gap: 3px !important; }
+  #sd-site-header .sd-nav-shell .sd-nav a {
+    min-height: 44px !important;
+    padding: 11px !important;
+    font-size: 13px !important;
+  }
+}
+
+#sd-site-header,
+#sd-site-header * { box-sizing: border-box !important; }
+#sd-site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 99999 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: rgba(255, 255, 255, .98) !important;
+  border: 0 !important;
+  border-bottom: 1px solid #dcecf3 !important;
+  box-shadow: 0 12px 34px rgba(6, 31, 53, .07) !important;
+  backdrop-filter: blur(16px) !important;
+  font-family: Arial, sans-serif !important;
+}
+#sd-site-header .sd-header-inner {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: min(1200px, calc(100% - 40px)) !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: 21px 0 !important;
+  gap: 16px !important;
+  text-align: center !important;
+}
+#sd-site-header .sd-brand-lockup {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#sd-site-header .sd-logo-link,
+#sd-site-header .sd-logo {
+  display: block !important;
+  width: 150px !important;
+  min-width: 150px !important;
+  max-width: 150px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+}
+#sd-site-header .sd-brand-meta {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+#sd-site-header .sd-brand-kicker {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #20bfe9 !important;
+  font: 800 11px/1.4 Arial, sans-serif !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+#sd-site-header .sd-nav-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 700px) {
+  #sd-site-header .sd-header-inner {
+    width: calc(100% - 24px) !important;
+    padding: 13px 0 14px !important;
+    gap: 12px !important;
+  }
+  #sd-site-header .sd-logo-link,
+  #sd-site-header .sd-logo {
+    width: 112px !important;
+    min-width: 112px !important;
+    max-width: 112px !important;
+  }
+  #sd-site-header .sd-brand-kicker {
+    font-size: 9px !important;
+    letter-spacing: 1.5px !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<header class="sd-header" id="sd-site-header">
+  <div class="sd-header-inner">
+    <div class="sd-brand-lockup">
+      <a href="index.html" class="sd-logo-link" aria-label="Simply Dentrix Home">
+        <img class="sd-logo" src="assets/images/logo.png" alt="Simply Dentrix Logo">
+      </a>
+      <div class="sd-brand-meta">
+        <div class="sd-brand-kicker">Premium Dental Laboratory</div>
+      </div>
+    </div>
+    <div class="sd-nav-wrap">
+      <div class="sd-nav-shell">
+        <nav class="sd-nav" aria-label="Simply Dentrix navigation">
+          <a href="index.html">Home</a>
+          <a href="customer-portal.html" class="sd-active" aria-current="page">Customer Portal</a>
+          <a href="material.html">Material</a>
+          <a href="product.html">Product</a>
+          <a href="equipment-consumables.html">Equipment &amp; Consumables</a>
+          <a href="turn-around-time.html">Turn Around Time</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="sd-portal">
+
+  <!-- HEADER -->
+  
+
+  <!-- HERO -->
+  <section class="sd-hero">
+    <div class="sd-container sd-hero-grid">
+      <div>
+        <div class="sd-pill">
+          <span class="sd-pill-dot"></span>
+          Customer Case Resources
+        </div>
+
+        <h1>Download, Complete & Submit Your Rx Form.</h1>
+
+        <p class="sd-hero-copy">
+          Choose the detailed or simplified Simply Dentrix prescription form.
+          Complete the fillable PDF on your computer, save it, and email it with
+          any scans, photographs, or supporting case files.
+        </p>
+
+        <div class="sd-hero-actions">
+          <a
+            class="sd-btn sd-btn-primary sd-pdf-link"
+            href="#" data-rx-form="detailed"
+            data-pdf-name="Detailed Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Detailed RX Form
+          </a>
+
+          <a
+            class="sd-btn sd-btn-secondary sd-pdf-link"
+            href="#" data-rx-form="simplified"
+            data-pdf-name="Simplified Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Simplified RX Form
+          </a>
+
+          <div class="sd-hero-note">
+            The completed PDF must be saved and manually attached to your email.
+          </div>
+        </div>
+      </div>
+
+      <div class="sd-hero-card">
+        <div class="sd-hero-card-inner">
+          <div class="sd-card-top">
+            <div class="sd-card-icon" aria-hidden="true">🦷</div>
+            <div>
+              <h2>Rx Form Required</h2>
+              <span>Please include one completed prescription form with every submitted case.</span>
+            </div>
+          </div>
+
+          <div class="sd-mini-list">
+            <div class="sd-mini-item">
+              <span class="sd-check">✓</span>
+              <span>Doctor, practice, patient, due-date, and case details.</span>
+            </div>
+
+            <div class="sd-mini-item">
+              <span class="sd-check">✓</span>
+              <span>Restoration, material, shade, and design selections.</span>
+            </div>
+
+            <div class="sd-mini-item">
+              <span class="sd-check">✓</span>
+              <span>Supporting scans, photographs, and special instructions.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM CHOICES -->
+  <section class="sd-forms" id="forms">
+    <div class="sd-container">
+      <div class="sd-section-head">
+        <div class="sd-eyebrow">Official Fillable PDFs</div>
+        <h2>Choose the Best Form for Your Case</h2>
+        <p>
+          Both forms can be completed electronically. Select the detailed form
+          for more complex cases or the simplified form for routine submissions.
+        </p>
+      </div>
+
+      <div class="sd-form-grid">
+
+        <!-- DETAILED FORM -->
+        <article class="sd-form-card">
+          <div class="sd-form-card-top">
+            <div class="sd-pdf-icon" aria-hidden="true">PDF</div>
+            <div>
+              <h3>Detailed RX Form</h3>
+              <p>
+                Best for complex or highly customized cases requiring additional
+                restorative, removable, design, and case-instruction options.
+              </p>
+            </div>
+          </div>
+
+          <div class="sd-feature-list">
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Expanded restoration and material selections</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Shade, tooth, margin, and design information</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Additional case notes and enclosed-item details</span>
+            </div>
+          </div>
+
+          <a
+            class="sd-btn sd-pdf-link"
+            href="#" data-rx-form="detailed"
+            data-pdf-name="Detailed Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Detailed Fillable PDF
+          </a>
+
+          <div class="sd-file-note">
+            Open the downloaded file in Adobe Acrobat Reader, complete it, and save a new copy.
+          </div>
+        </article>
+
+        <!-- SIMPLIFIED FORM -->
+        <article class="sd-form-card">
+          <div class="sd-form-card-top">
+            <div class="sd-pdf-icon" aria-hidden="true">PDF</div>
+            <div>
+              <h3>Simplified RX Form</h3>
+              <p>
+                A cleaner and faster option for routine fixed restorations,
+                removable cases, and straightforward laboratory instructions.
+              </p>
+            </div>
+          </div>
+
+          <div class="sd-feature-list">
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Quick doctor, practice, patient, and due-date fields</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Fixed and removable case selections</span>
+            </div>
+
+            <div class="sd-feature">
+              <span>✓</span>
+              <span>Case instructions and enclosed-item information</span>
+            </div>
+          </div>
+
+          <a
+            class="sd-btn sd-pdf-link"
+            href="#" data-rx-form="simplified"
+            data-pdf-name="Simplified Rx Form"
+            target="_blank"
+            rel="noopener"
+          >
+            Download Simplified Fillable PDF
+          </a>
+
+          <div class="sd-file-note">
+            Open the downloaded file in Adobe Acrobat Reader, complete it, and save a new copy.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sd-process">
+    <div class="sd-container">
+      <div class="sd-section-head">
+        <div class="sd-eyebrow">How It Works</div>
+        <h2>Complete Your Submission in Three Steps</h2>
+        <p>
+          Keep the completed prescription and supporting case files together
+          so the Simply Dentrix team can review the case efficiently.
+        </p>
+      </div>
+
+      <div class="sd-process-grid">
+        <article class="sd-process-card">
+          <div class="sd-process-number">1</div>
+          <h3>Download</h3>
+          <p>
+            Select the detailed or simplified fillable Rx PDF and save it to your device.
+          </p>
+        </article>
+
+        <article class="sd-process-card">
+          <div class="sd-process-number">2</div>
+          <h3>Complete & Save</h3>
+          <p>
+            Enter all case details, select the appropriate options, and save the completed PDF.
+          </p>
+        </article>
+
+        <article class="sd-process-card">
+          <div class="sd-process-number">3</div>
+          <h3>Email the Case</h3>
+          <p>
+            Attach the saved Rx form along with scans, photographs, and any other supporting files.
+          </p>
+        </article>
+      </div>
+
+      <div class="sd-reader-note">
+        <strong>Adobe Acrobat Pro is not required for normal form completion.</strong>
+        Customers can generally use the free Adobe Acrobat Reader to type into the fields,
+        select checkboxes, save the completed form, and print it.
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBMISSION AND CONTACT -->
+  <section class="sd-submit">
+    <div class="sd-container sd-submit-grid">
+      <div>
+        <div class="sd-eyebrow">Submit Your Case</div>
+        <h2>Send the Completed Form to Simply Dentrix</h2>
+        <p class="sd-submit-copy">
+          Attach the completed Rx PDF and supporting digital case files to your email.
+          For physical impressions or models, include a printed copy of the prescription
+          with the package.
+        </p>
+      </div>
+
+      <div class="sd-submit-card">
+        <div class="sd-contact-list">
+          <div class="sd-contact-item">
+            <strong>Email</strong>
+            <a href="mailto:simplydentrix@gmail.com?subject=Simply%20Dentrix%20New%20Case%20Submission">
+              simplydentrix@gmail.com
+            </a>
+          </div>
+
+          <div class="sd-contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+17145887030">714-588-7030</a>
+          </div>
+
+          <div class="sd-contact-item">
+            <strong>Mailing Address</strong>
+            <span>Simply Dentrix<br>1315 W Cara Dr<br>Anaheim, CA 92805</span>
+          </div>
+        </div>
+
+        <a
+          class="sd-btn sd-email-button"
+          href="mailto:simplydentrix@gmail.com?subject=Simply%20Dentrix%20New%20Case%20Submission&body=Please%20attach%20the%20completed%20Rx%20form%20and%20all%20supporting%20case%20files."
+        >
+          Start Case Submission Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="sd-footer">
+    <div class="sd-container">
+      © 2026 Simply Dentrix. Premium dental restorations, crafted with precision.
+    </div>
+  </footer>
+
+  <div class="sd-toast" id="sdPdfToast" role="status" aria-live="polite"></div>
+</div>
+</body>
+</html>
