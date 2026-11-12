@@ -44,3 +44,7 @@ Sixteen pages now link to local `.html` files so navigation also works under a G
 Three homepage background images remain hosted on Unsplash. Product and category pages also retain the external images supplied in their CSS. The extracted local logo is reused on the portal instead of its remote logo. A full offline asset backup requires downloading the stock images separately.
 
 This repository stores the website files. Uploading them does not itself enable GitHub Pages or change the live website. The original clean URLs (such as `/material`) require hosting redirects or rewrites to the corresponding `.html` pages when replacing the current site.
+
+## Equipment & consumables
+
+`equipment-consumables.html` adds the supplied 16-product collection, product review/details, and a saved inquiry cart. Payment provider selection was deferred; online payment is disabled and no orders are submitted. See [equipment commerce setup and validation](docs/equipment-commerce.md) for launch inputs and checks.
